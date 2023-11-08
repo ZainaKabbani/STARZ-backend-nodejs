@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
 const mongoosePaginate = require("mongoose-paginate");
-const { lookUpRaw } = require("geojson-places");
+
 const nearbyCities = require("nearby-cities");
+
 const productSchema = mongoose.Schema(
   {
     name: {

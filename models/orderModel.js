@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { lookUpRaw } = require("geojson-places");
+
 const nearbyCities = require("nearby-cities");
 const orderSchema = new mongoose.Schema(
   {
