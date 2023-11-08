@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const { lookUpRaw } = require("geojson-places");
-
+const nearbyCities = require("nearby-cities");
 const orderSchema = new mongoose.Schema(
   {
     product: {
@@ -41,18 +41,15 @@ const orderSchema = new mongoose.Schema(
 
 // Virtual propreties
 orderSchema.virtual("destinationAddressInWords").get(function () {
+  const query = { latitude: this.destinationAddress[0], longitude: this.destinationAddress[1] };
+  const cities = nearbyCities(query);
   // latitude/longitude
-  const result = lookUpRaw(
-    this.destinationAddress[0],
-    this.destinationAddress[1]
-  );
-  console.log(result)
+ 
+  if (cities) {
+    
 
-  if (result) {
-    delete result["features"][0]["geometry"];
-
-    const country = result["features"][0]["properties"]["geonunit"];
-    const city = result["features"][0]["properties"]["name_en"];
+    const country = cities[0].country;
+    const city = cities[0].name;
     return { country, city };
   }
 });
