@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "ca0559b9-1bde-4bfb-8571-008ab8bc2cc6",
+		"_postman_id": "7b5659f5-3f8d-433f-a5df-3cb247bc47c1",
 		"name": "STARZ e-commerce system",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "17973568",
-		"_collection_link": "https://blue-capsule-450077.postman.co/workspace/Team~384ebdb6-7cec-4a70-bf82-6f354b717175/collection/17973568-ca0559b9-1bde-4bfb-8571-008ab8bc2cc6?action=share&source=collection_link&creator=17973568"
+		"_exporter_id": "17973568"
 	},
 	"item": [
 		{
@@ -1636,6 +1635,37 @@
 					"response": []
 				}
 			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://extinct-yak-tank-top.cyclic.app/",
+			"type": "string"
+		},
+		{
+			"key": "jwt",
+			"value": ""
 		}
 	]
 }
