@@ -12,7 +12,7 @@ the project is created with:
 
 > **_NOTE:_**  The response may take some time due to the deployment on Atlas and Cyclic.
 
-After downloading the project, you can import the postman collection which is named.<br>
+After downloading the project, you can import the postman collection which is named (STARZ e-commerce system.postman_collection.json).<br>
 to login:<br> 
 for the users: 
 | Email             | Password  |
